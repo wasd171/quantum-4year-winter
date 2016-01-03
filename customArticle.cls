@@ -70,6 +70,11 @@
 	\newcommand{\brsquare}[1]{\left[ #1 \right]}
 
 	% Easy partial derivatives
+		% Simple partial derivative
+		\newcommand{\fracpart}[2]{
+			\frac{\partial #1}{\partial #2}
+		}
+		
 		% Partial derivative with constant #3
 		\newcommand{\partfrac}[3]{
 			\brround{ \frac{\partial #1}{\partial #2} }_{#3}

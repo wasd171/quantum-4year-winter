@@ -133,6 +133,51 @@
 				\]
 			}
 		\end{enumerate}
+		
+	\section{Динамика квантовых систем в картине Шредингера. Эволюция фиделити. Теорема Крылова – Фока. (L8)}
+	
+		\begin{enumerate}[label=\asbuk*)]
+			\item{
+				Пусть теперь от времени зависят ВФ $f, g$:
+				\begin{gather*}
+					\frac{d}{dt} \Braket{f \left| \widehat p_i \right| g} = - \frac{i}{\hbar} \Braket{f \left|  \brsquare{\widehat p_i, \widehat H} \right| g}
+					\\
+					\brround{ \fracpart{f}{t} , \widehat p_i g } + \brround{ \widehat p_i f, \fracpart{g}{t} } = \frac{i}{\hbar} \brround{f, \widehat p_i \widehat H g} + \frac{i}{\hbar} \brround{f, \widehat H \widehat p_i g}
+					\\
+					\widehat H, \widehat p \text{ -- эрмитовы} \quad \Rightarrow
+					\\
+					\brround{ \fracpart{f}{t} , \widehat p_i g } + \brround{ \widehat p_i f, \fracpart{g}{t} } = -\frac{i}{\hbar} \brround{\widehat p_i f, \widehat H g} + \frac{i}{\hbar} \brround{\widehat H f, \widehat p_i g}
+					\\
+					\brround{\fracpart{f}{t} + \frac{i}{\hbar} \widehat H f, \widehat p_i g } + \brround{\widehat p_i f, \fracpart{g}{t} + \frac{i}{\hbar} \widehat H g} = 0
+				\end{gather*}
+				Выполняется для ВФ, удовлетворяющих \boxed{i \hbar \fracpart{\psi}{t} = \widehat H \psi} $\leftarrow$ УШ	
+			}
+			\item{
+				Суперпозиция двух стационарных состояний: 
+				\[
+					\psi (t) = \alpha \Ket{\psi_k} \exp \brround{- i \omega_k t} + \beta \Ket{\psi_n} \exp \brround{-i \omega_n t}
+				\]
+				Фиделити текущего и начального состояний:
+				\begin{gather*}
+					\mathcal{F}(t) = \left| \Braket{\psi(t) | \psi(0)} \right|^2 = |\alpha|^4 + 2|\alpha|^2 |\beta|^2 \cos \omega_{nk} t + |\beta|^4
+					\\
+					\omega_{nk} = \frac{E_n - E_k}{\hbar} = \omega_n - \omega_k \quad \text{-- ``частота перехода''}
+				\end{gather*}
+				
+				Для непрерывного спектра $E$ суперпозиция состояний:
+				\[
+					\psi(\xi, 0) = \int C(E) \psi_E (\xi) dE
+				\]
+				Фиделити текущего и начального состояний:
+				\[
+					\boxed{
+						\mathcal{F}(t) = \left|  \Braket{\psi(\xi, 0) | \psi(\xi, t)} \right|^2 = \left| \int \left| C(E) \right|^2 \exp \brround{-\frac{i}{\hbar} Et} dE \right|^2
+					}
+					\leftarrow
+					\text{теорема Крылова-Фока}
+				\]
+			}
+		\end{enumerate}
 	
 				
 		
