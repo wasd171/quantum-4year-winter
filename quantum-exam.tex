@@ -1,7 +1,75 @@
-\documentclass[14pt]{customArticle}
+\documentclass[12pt]{customArticle}
+
+\usepackage[explicit]{titlesec}
+\titleformat{\section}
+  {\normalsize}{\bf \thesection.}{1em}{\bf #1}
+\usepackage{braket}
+\usepackage{framed}
+
+
+\title{Ответы к вопросам по курсу \\ ``Квантовая теория''}
 
 \begin{document}
-
-    \par Hello world)!
-
+	\maketitle
+		
+	\section{Соотношения неопределенностей (для операторов координаты и импульса, для компонент вектора момента). Когерентные состояния гармонического осциллятора. (L5, L17, L38)}
+	
+		\begin{enumerate}[label=\asbuk*)]
+			\item {
+				Рассмотрим дисперсию величины $A: \quad \overline{\Delta A^2} = \Bra{\psi} \left(\hat{A} - \bar{A} \right)^2 \Ket{\psi}$ 
+				\\
+				Дисперсия значений величин $x$ и $y$ связана с коммутатором операторов: $\left[ \hat{x}, \hat{y} \right] = i \hat{A}$
+				\\
+				Пусть оператор $\hat{L} = \left( \hat{x} - \bar{x} \right) + i \gamma \left( \hat{y} - \bar{y} \right), \quad \gamma \in {\Bbb R}, \quad ! \hat{x}, \hat{y} \text{ -- эрмитовы} $
+				\\
+				Собственные значения оператора $\hat{L}^+ \hat{L}$ неотрицательны:
+				\begin{gather*}
+					\Bra{\psi} \left\{ \left( \hat{x} - \bar{x} \right) - i \gamma \left( \hat{y} - \bar{y} \right) \right\} \left\{ \left( \hat{x} - \bar{x} \right) + i \gamma \left( \hat{y} - \bar{y} \right) \right\} \Ket{\psi} \geq 0
+					\\
+					\Bra{\psi} \overline{\Delta x^2} + \gamma^2 \overline{\Delta y^2} - \gamma \bar{A} \Ket{\psi} \geq 0
+				\end{gather*}
+				Выполняется для $\forall \gamma \Rightarrow D \leq 0 : \quad \bar{A}^2 - 4 \overline{\Delta x^2} \; \overline{\Delta y^2} \leq 0$
+				\begin{center}
+					\boxed{
+						\overline{\Delta x^2} \; \overline{\Delta y^2} \geq \frac{\bar{A}^2}{4}
+					}
+				\end{center}
+				
+				Таким образом $\displaystyle \left[ \hat{p_i}, \hat{x_i} \right] = -i \hbar \quad \Rightarrow \quad \underline{ \overline{\Delta p^2} \; \overline{\Delta x^2} \geq \frac{\hbar^2}{4} }$
+				\\
+				Аналогично для векторного оператора момента: 
+				\begin{gather*}
+					\left[ \hat J_i , \hat J_k \right] = i \Epsilon_{ijk} \hat J_j \Rightarrow \Delta J_x \Delta J_y \geq \frac{1}{2} \left| \left< \hat J_z \right> \right|
+					\\
+					\hat J_x = \frac{1}{2} \begin{vmatrix} 0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0\end{vmatrix}; \quad \hat J_y = \frac{-i}{2} \begin{vmatrix}
+						0 & 1 & 0 \\
+						-1 & 0 & 1 \\
+						0& -1 & 0
+					\end{vmatrix}; \quad \hat J_z = \begin{vmatrix}
+						1 & 0 & 0 \\
+						0 & 0 & 0 \\
+						0 & 0 & -1
+					\end{vmatrix}
+					\\
+					\Epsilon_{ijk} \text{ -- единичный антисимметричный тензор (Леви-Чивиты)}
+				\end{gather*}
+			}
+			\item {
+				В классической механике $p$ и $x$ определены одновременно $\Rightarrow$ состояния, наиболее близкие к классическим описываются минимальными неопределённостями, то есть \[ D = 0 \quad \text{и} \quad \overline{\Delta p^2} \; \overline{\Delta x^2} = \frac{\hbar^2}{4} \]
+				Так как СЗ оператора $\hat L^+ \hat L$ неотрицательны, то СФ оператора $L^+$ будут соответствовать СЗ $= 0$. Получаем:
+				\[
+					\brround{x + \gamma \hbar \frac{\partial}{\partial x}} \psi = \lambda \psi, \quad \lambda = \bar x + i \gamma \bar p
+				\]
+				Решение этого уравнения: $\psi(x) = \brround{2 \pi \overline{\Delta x^2} }^{-\frac{1}{4}} \exp \brsquare{- \frac{ \brround{x - \bar x }^2 }{4 \overline{ \Delta x^2 } } + i \frac{\bar p x}{\hbar}  }$
+				\\
+				Если забить на размерности, то это уравнение эквивалентно 
+				\begin{gather*}
+					\hat a \psi = \lambda \psi; \quad \hat a \Ket{\alpha} = \alpha \Ket{\alpha}; \quad \Braket{\alpha|\alpha} = 1
+					\\
+					\hat a = \frac{1}{\sqrt{2}} \brround{\hat x + i \hat p} \text{ -- оператор уничтожения}
+				\end{gather*}
+				Последнему уравнению удовлетворяют ВФ, называющиеся {\bf когерентными состояниями гармонического осциллятора}
+			}
+		\end{enumerate}
+		
 \end{document}
