@@ -68,6 +68,7 @@
 	% Prints nice brackets
 	\newcommand{\brround}[1]{\left( #1 \right)}
 	\newcommand{\brsquare}[1]{\left[ #1 \right]}
+	\newcommand{\brlines}[1]{\left| #1 \right|}
 
 	% Easy partial derivatives
 		% Simple partial derivative

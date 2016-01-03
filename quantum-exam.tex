@@ -178,6 +178,36 @@
 				\]
 			}
 		\end{enumerate}
+		
+	\section{Матричные элементы операторов координаты и импульса. Их связь, теоремы о суммах. Теорема соответствия для матричных элементов. (L8, L9, L15)}
+	
+		\begin{enumerate}[label=\asbuk*)]
+			\item{
+				Общий вид уравнения Гейзенберга: $\dot{\widehat z} = \frac{i}{\hbar} \brsquare{\widehat H, \widehat z}$
+				\[
+					\Rightarrow \boxed{ \brround{\dot Z}_{nk} = i \omega_{nk} z_{nk} }
+					\qquad
+					p_{nk} = i m \omega_{nk} x_{nl}
+				\]
+			}
+			\item{
+				Теорема о матричных элементах: из а) следует, что
+				\begin{gather*}
+					A_m = \sum_k \brlines{z_{nk}}^2 \omega^{2m+1}_{kn} = -\frac{i}{2} \Braket{n \brlines{ \brsquare{\frac{d^m \widehat z}{d t^m}, \frac{d^{m+1} \widehat z}{d t^{m+1}}} } n}
+					\\
+					B_m = \sum_k \brlines{z_{kn}}^2 \omega^{2m}_{kn} = \Braket{n  \brlines{ \brround{\frac{d^m \widehat z}{d t^m}}^2 } n}
+				\end{gather*}
+				Ещё можно почитать в L9
+			}
+			\item{
+				\textbf{Теорема о соответствии матричных элементов:}
+				\\
+				Матричный элемент координаты $x_{n+p, n}$ между стационарными состояниями $\approx$ фурье-амплитуде $X_p$ $p$-й гармоники закона классического движения при энергии, равной среднему значению от энергий начального и конечного состояний перехода -- с точностью до $\hbar$
+				\[
+					x_{n+p, n} \approx X_p + \hbar \frac{p}{2} \Omega \frac{d X_p}{dE}, \qquad \Omega \text{ -- частота движения классической системы}
+				\]
+			}
+		\end{enumerate}
 	
 				
 		
