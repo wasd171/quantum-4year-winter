@@ -72,4 +72,106 @@
 			}
 		\end{enumerate}
 		
+	\section{Динамика квантовых систем в картине Гейзенберга. Теоремы Эренфеста. Эволюция волновых пакетов свободной частицы. (L7)}
+		\begin{enumerate}[label=\asbuk*)]
+			\item {
+				Матричные элементы операторов $\hat x_i$ и $\hat p_k$, вычисленные между ВФ $f$ и $g$ удовлетворяют уравнениям Гамильтона классической механики:
+		\begin{gather*}
+			\frac{d}{dt} \Braket{f \left| \hat p_i \right| g} = - \Braket{f \left| \frac{\partial \hat H}{\partial \hat x_i} \right| g}
+			\\
+			\frac{d}{dt} \Braket{f \left| \hat x_i \right| g} = - \Braket{f \left| \frac{\partial \hat H}{\partial \hat p_i} \right| g}
+		\end{gather*}
+		{\bf Картина Гейзенберга:} от времени зависят лишь операторы, то есть
+		\[
+			\dot{\widehat{p_i}} = - \frac{\partial \hat H}{\partial \hat x_i} 
+			\qquad
+			\dot{\widehat{x_i}} = - \frac{\partial \hat H}{\partial \hat p_i} 
+		\]
+		Учитывая, что $\displaystyle \hat p_i \hat{x_i}^n - \hat{x_i}^n \hat p_i = -i \hbar n \hat{x_i}^{n-1}$ для всех функций, разлагая в степенной ряд, получаем
+		\[
+			\hat p_i f - f \hat p_i = -i \hbar \frac{\partial f}{\partial x_i} \Rightarrow 
+			\begin{cases}
+				\dot{\widehat p_i} = - \frac{i}{\hbar} \brsquare{\widehat p_i, \widehat H}
+				\\[1em]
+				\dot{\widehat x_i} = - \frac{i}{\hbar} \brsquare{\widehat x_i, \widehat H}
+
+			\end{cases}
+			\leftarrow \quad \textbf{уравнения Гейзенберга}
+		\]
+	
+			}
+			
+			\item {
+				\begin{enumerate}[label=\arabic*)]
+					\item{
+						\[
+							\frac{d}{dt} \left< x \right> = \frac{i}{\hbar} \left< Hx - xH\right>, \qquad H = \frac{p^2_x}{2m} + V(x)
+						\]
+						Так как $x$ и $V(x)$ коммутируют, то $\frac{d}{dt} \left< x \right> = \frac{i}{2m \hbar} \left< p^2_x - x p^2_x\right> $
+						\[
+							\frac{d}{dt} \left< x \right> = \frac{i}{2m \hbar} \left< p_x \left(p_x x - x p_x\right) + \left(p_x x - x p_x\right) p_x \right>
+						\]
+						Далее так как $p_x x - x p_x = -i \hbar$, то \boxed{\frac{d}{dt} \left< x \right> = \frac{1}{m} \left< p_x \right>}
+					}
+					\item{
+						\[
+							\frac{d}{dt} \left< p_x \right> = \frac{i}{\hbar} \left< V p_x - p_x V \right> = - \Braket{\frac{\partial V}{\partial x}}
+						\]
+						\begin{center}
+							\boxed{
+							\frac{d}{dt} \left< p_x \right> = m \frac{d^2}{d t^2} \left< x \right> = -\Braket{\frac{\partial V}{\partial x}} = \Braket{F(x)}
+						}
+						\end{center}
+					}
+				\end{enumerate}
+				Формулы в коробочках -- теорема Эренфеста
+			}
+			\item{
+				Свободная частица $\displaystyle \widehat H = \frac{\widehat p^2}{2m}$. Решение: 
+				\[
+					\widehat p (t) = \widehat p_0; \qquad \widehat r (t) = \widehat r_0 + \frac{1}{m} \widehat p_0 t
+				\]
+			}
+		\end{enumerate}
+	
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 \end{document}
